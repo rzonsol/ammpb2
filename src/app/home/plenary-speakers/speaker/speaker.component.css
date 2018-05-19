@@ -1,0 +1,11 @@
+a{
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1.5em;
+  display: inline;
+  color: black;
+  text-align: center;
+}
+.red{
+  background-color: red;
+}

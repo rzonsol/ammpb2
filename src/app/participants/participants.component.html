@@ -1,0 +1,8 @@
+<div class=" d-flex flex-column offset-lg-1">
+  <h2>Participants</h2>
+  <app-participant
+    *ngFor="let participant of participants"
+    [participant]="participant"
+    class=" d-flex align-content-center offset-lg-1"
+  ></app-participant>
+</div>

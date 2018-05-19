@@ -1,0 +1,68 @@
+<div class="row d-flex justify-content-xl-center">
+  <nav class="navbar navbar-expand-xl navbar-light">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" (click)="isNavbarCollapsed = showSubMenu(isNavbarCollapsed)"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" [ngbCollapse]="isNavbarCollapsed">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item" [ngClass]="{'active': setActiveClass('/')}">
+          <a class="nav-link" (click)="onHomeBtn()">Home <span class="sr-only">(current)</span></a>
+        </li>
+
+        <li class="nav-item " [ngClass]="{'active': setActiveClass('/program')}">
+          <a class="nav-link" (click)="onProgramBtn()">Program</a>
+        </li>
+
+        <li class="nav-item " [ngClass]="{'active': setActiveClass('/abstracts')}">
+          <a class="nav-link" (click)="onAbstractsBtn()">Abstracts</a>
+        </li>
+        <li class="nav-item " [ngClass]="{'active': setActiveClass('/participants')}">
+          <a class="nav-link" (click)="onParticipantsBtn()">Participants</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="formDropdown" role="button"
+             (click)="isFormCollapsed = showSubMenu(isFormCollapsed)" aria-controls="formNavbar" aria-expanded="false"
+             aria-label="Toggle navigation">
+            Registration form
+          </a>
+          <div [ngbCollapse]="isFormCollapsed" class="collapse dropdown-menu" id="formNavbar">
+            <a class="dropdown-item" (click)="onFormBtn()">Registration form</a>
+            <a class="dropdown-item" (click)="onFeeBtn()">Conference costs</a>
+            <a class="dropdown-item" (click)="onBankTransferBtn()">Bank Transfer</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="accommodationDropdown" role="button"
+             (click)="isAccommodationCollapsed = showSubMenu(isAccommodationCollapsed)" aria-controls="accommodationNavbar"
+             aria-expanded="false" aria-label="Toggle navigation">
+            Accommodation
+          </a>
+          <div [ngbCollapse]="isAccommodationCollapsed" class="collapse dropdown-menu" id="accommodationNavbar">
+            <a class="dropdown-item" (click)="onAccommodationBtn()">Accommodation</a>
+            <a class="dropdown-item" (click)="onConferenceSiteBtn()">Conference site</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="travelDropdown" role="button"
+             (click)="isTravelCollapsed = showSubMenu(isTravelCollapsed)" aria-controls="travelNavbar" aria-expanded="false"
+             aria-label="Toggle navigation">
+            Travel
+          </a>
+          <div [ngbCollapse]="isTravelCollapsed" class="collapse dropdown-menu" id="travelNavbar">
+            <a class="dropdown-item" (click)="onMoneyBankingBtn()">Money and banking</a>
+            <a class="dropdown-item" (click)="onTravelBtn()">Travel</a>
+          </div>
+        </li>
+        <li class="nav-item" [ngClass]="{'active': setActiveClass('/contact')}">
+          <a class="nav-link" (click)="onContactBtn()">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+
+

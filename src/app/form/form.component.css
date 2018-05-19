@@ -1,0 +1,35 @@
+a{
+  text-decoration:none;
+  padding-bottom: 1em;
+}
+.extraSpace{
+  padding-bottom: 2em;
+}
+
+.ng-invalid.ng-touched.form-control{
+  border: 1px red solid;
+}
+.help-block{
+  color: red;
+  font-size: 0.7em;
+}
+.required:after {
+  content:" *";
+  color: red;
+}
+.explain{
+  margin-top: 1em;
+  font-size: 0.7em;
+}
+#arrivalDate, #departureDate{
+  width: 10em;
+  display: inline-block;
+}
+
+#arrivalDateBtn, #departureDateBtn{
+  margin-bottom: .2em;
+}
+
+.noStrong {
+  font-weight: lighter;
+}

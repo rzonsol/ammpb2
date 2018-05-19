@@ -1,0 +1,130 @@
+<div class="container
+container-fluid
+col-lg-offset-1
+col-lg-10
+col-md-offset-0
+col-md-12
+">
+  <h2>Registration Form</h2>
+  <div class="row">
+    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="firstName" class="required">First name</label>
+        <input
+          type="text"
+          id="firstName"
+          formControlName="firstName"
+          class="form-control"
+          placeholder="First name"
+        />
+        <span class="help-block" *ngIf="!signupForm.get('firstName').valid && signupForm.get('firstName').touched">Pleas enter a valid first name</span>
+      </div>
+      <div class="form-group">
+        <label for="lastName" class="required">Last name</label>
+        <input
+          type="text"
+          id="lastName"
+          formControlName="lastName"
+          class="form-control"
+          placeholder="Last name"
+        />
+        <span class="help-block" *ngIf="!signupForm.get('lastName').valid && signupForm.get('lastName').touched">Pleas enter a valid last name</span>
+
+      </div>
+      <div class="form-group">
+        <label for="email" class="required">Email</label>
+        <input
+          type="text"
+          id="email"
+          formControlName="email"
+          class="form-control"
+          placeholder="Email"
+        />
+        <span class="help-block" *ngIf="!signupForm.get('email').valid && signupForm.get('email').touched">Pleas enter a valid email</span>
+
+      </div>
+      <div class="form-group">
+        <label for="affiliation" class="required">Affiliation<span class="small noStrong">(if you are a PhD student please indicate also the name of your supervisor)</span>
+        </label>
+        <input
+          type="text"
+          id="affiliation"
+          formControlName="affiliation"
+          class="form-control"
+          placeholder="Affiliation"
+        />
+        <span class="help-block" *ngIf="!signupForm.get('affiliation').valid && signupForm.get('affiliation').touched">Pleas enter a valid affiliation</span>
+      </div>
+      <!--<div class="form-group">-->
+      <!--<label for="phoneNumber">Phone number</label>-->
+      <!--<input-->
+      <!--type="text"-->
+      <!--id="phoneNumber"-->
+      <!--formControlName="phoneNumber"-->
+      <!--class="form-control"-->
+      <!--placeholder="Phone number"-->
+      <!--/>-->
+      <!--</div>-->
+      <div class="form-group">
+        <label for="citizenship" class="required">Citizenship</label>
+        <input
+          type="text"
+          id="citizenship"
+          formControlName="citizenship"
+          class="form-control"
+          placeholder="Citizenship"
+        />
+        <span class="help-block" *ngIf="!signupForm.get('citizenship').valid && signupForm.get('citizenship').touched">Pleas enter value</span>
+
+      </div>
+      <div class="form-group">
+        <label for="arrivalDate">Arrival Date</label>
+        <div>
+          <input class="form-control"
+                 id="arrivalDate"
+                 placeholder="yyyy-mm-dd"
+                 name="arrivalDate"
+                 formControlName="arrivalDate"
+                 [(ngModel)]="arrivalDate"
+                 ngbDatepicker #d="ngbDatepicker">
+          <button class="btn btn-outline-secondary" (click)="d.toggle()" type="button" id="arrivalDateBtn">
+            <img src="../../assets/graphics/calendar-icon.svg" style="width: 1.2rem; height: 1rem; cursor: pointer;"/>
+          </button>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="departureDate">Departure Date</label>
+        <div>
+          <input class="form-control"
+                 id="departureDate"
+                 placeholder="yyyy-mm-dd"
+                 name="departureDate"
+                 formControlName="departureDate"
+                 [(ngModel)]="departureDate"
+                 ngbDatepicker #e="ngbDatepicker">
+          <button class="btn btn-outline-secondary" (click)="e.toggle()" type="button" id="departureDateBtn">
+            <img src="../../assets/graphics/calendar-icon.svg" style="width: 1.2rem; height: 1rem; cursor: pointer;"/>
+          </button>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="specialRequest">Special requests</label>
+        <textarea
+          type="text"
+          id="specialRequest"
+          formControlName="specialRequest"
+          class="form-control"
+          rows="5"
+          placeholder="Special request"
+        ></textarea>
+        <div class="row explain">
+          <span class="required"></span> - required fields
+        </div>
+        <hr/>
+        <button class="btn btn-primary" type="submit" [disabled]="disableBtn">Submit</button>
+        <button class="btn btn-danger" (click)="onClearForm()" type="reset" [disabled]="disableBtn">Clear form</button>
+        <button class="btn btn-info" (click)="onGoBack()">Main</button>
+      </div>
+    </form>
+  </div>
+</div>

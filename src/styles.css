@@ -1,1 +1,106 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  /*background-color: #DEDBDE;*/
+  background-color: #DEDBDE;
+}
+
+.body{
+  background-color: white;
+  position: relative;
+  padding-bottom: 5em;
+  font-family: Georgia, serif;
+}
+
+i {
+  font-style: italic;
+}
+
+#logo{
+  width: 100%;
+}
+
+#logo img {
+  position: relative;
+  width: 100%;
+}
+
+#logo h1 {
+  width: 100%;
+  height: 0px;
+  z-index: 100;
+  position: relative;
+  padding-left: 1em;
+  padding-right: 1em;
+  top: 1em;
+  width: 100%;
+  color: #31568c;
+  text-align: center;
+  font-weight: 700;
+  font-variant: small-caps;
+  font-size: 3em;
+}
+#logoBackground{
+  background-color: white;
+  padding: 0.1em 0.3em 0em 0.3em;
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+
+}
+h2 {
+  color: #31568c;
+  margin: 0;
+  letter-spacing: 0.125em;
+  font-weight: 600;
+  font-family: Georgia, serif;
+  padding: 1em .5em 1em .5em;
+  font-variant: small-caps;
+  clear: both;
+}
+
+p,a{
+  font-size: 1.1em;
+}
+
+a, .a{
+  color: #337ab7;
+  text-decoration: none;
+}
+
+h3{
+  letter-spacing: 0.125em;
+  font-weight: 600;
+  font-family: Georgia, serif;
+  padding: 1em .5em 1em .5em;
+  font-variant: small-caps;
+  color: #31568c;
+}
+
+
+
+
+
+
+@media screen and (max-width: 1200px) {
+  #logo h1 {
+    padding-top: 1em;
+    z-index: auto;
+    height: auto;
+    top: 0px;
+    font-size: 2em;
+    clear: both;
+    padding-bottom: 1em;
+    color: #31568c;
+    padding-top: 1em;
+    z-index: auto;
+    font-size: 2em;
+    clear: both;
+    padding-bottom: 1em;
+    color: #31568c;
+  }
+}
+
+.bred{
+  background-color: red;
+}
+
+

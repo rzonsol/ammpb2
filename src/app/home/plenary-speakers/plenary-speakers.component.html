@@ -1,0 +1,12 @@
+<div class="container">
+  <h2>Plenary speakers</h2>
+  <app-speaker
+    *ngFor="let participant of participants"
+    [participant]="participant"
+    class="d-inline-block
+            col-xl-6
+            col-md-8
+            spaces
+              "
+  ></app-speaker>
+</div>
